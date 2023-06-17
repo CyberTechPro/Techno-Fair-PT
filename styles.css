@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin-bottom: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+    height: 100vh;
+    z-index: -1;
+}
+
+nav {
+    padding: 10px;
+    color: #fff;
+    backdrop-filter: blur(2px);
+    height: 15vh;
+}
+
+.navbar-logo h1 {
+    font-weight: 700;
+    color: #A3E4DB;
+    text-shadow: 0 0 10px #283739, 0 0 20px #283739;
+}
+
+.logo-img {
+    width: 30px;
+}
+
+.navbar-logo * {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.nav-items ul {
+    text-align: center;
+}
+
+.nav-items ul li {
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.nav-items ul li a {
+    color: white;
+    position: relative;
+    padding-bottom: 2px;
+    font-weight: 600;
+}
+
+.nav-items ul li a.active {
+    color: #A3E4DB;
+    font-weight: 600;
+}
+
+.nav-items ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% + 4px);
+    height: 3px;
+    background-color: #A3E4DB;
+    transform: translateX(-101%);
+    transition: .4s;
+    margin-top: 5px;
+}
+
+.nav-items ul li a:hover::before {
+    transform: translateX(0%);
+}
+
+.cta-btn {
+    background-color: #A3E4DB;
+    padding: 10px;
+    color: #283739;
+    font-weight: 600;
+    font-family: 'Mulish', sans-serif;
+    border-radius: 5px;
+    border: 2px solid #A3E4DB;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cta-btn:hover {
+    scale: 0.9;
+    background-color: transparent;
+    color: white;
+    outline: 2px;
+}
+
+.header-container {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-40%,-80%);
+}
+
+.header-content {
+    width: 85%;
+    text-align: center;
+    color: cyan;
+    padding: 20px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.081);
+}
+
+.header-content h2 {
+    font-size: 2.2rem;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+}
+
+.header-container span {
+    color: white;
+}

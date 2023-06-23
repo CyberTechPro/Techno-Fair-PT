@@ -28,6 +28,7 @@ header {
     height: 100vh;
     position: relative;
     overflow-x: hidden;
+    z-index: 1;
 }
 
 .header-img {
@@ -344,7 +345,7 @@ nav {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
     width: 100%;
     align-items: flex-start;
 }
@@ -397,6 +398,66 @@ nav {
 .footer-nav a:hover,.footer-events a:hover {
     color: #865dff;
 }
+
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+  
+.footer-contact h3 {
+    color: #865dff;
+    font-weight: 600;
+}
+  
+.footer-contact a {
+    color: black;
+    line-height: 2;
+}
+  
+.gmail-img {
+    width: 30px;
+}
+  
+.social-footer {
+    display: flex;
+    margin-top: 1rem;
+}
+  
+.ig-footer,
+.fb-footer,
+.gmail-footer {
+    background-color: #000;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+  
+.ig-footer:hover,
+.fb-footer:hover,
+.gmail-footer:hover {
+    background-color: transparent;
+    color: black;
+    border-radius: 10px;
+}
+ 
+.email-a {
+    color: #11009e;
+    font-weight: bold;
+    transition: 0.1s;
+}
+  
+.email-a:hover {
+    color: #4267b2;
+}  
 
 @media screen and (max-width:768px) {
     .nav-items-b {
@@ -475,6 +536,21 @@ nav {
         height: 75vh;
 
     }
+
+    
+  .footer {
+    padding: 30px;
+  }
+
+  .footer-nav h3,
+  .footer-events h3 {
+    font-size: 1.8rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width:568px) {
@@ -536,12 +612,12 @@ nav {
     }
 
     .footer-head img {
-        width: 20px;
+        height: 70px;
     }
 
     .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
+        grid-template-columns: 2fr 1fr;
+        gap: 40px;
     }
 
     .copyright {
@@ -549,7 +625,38 @@ nav {
     }
 }
 
-@media screen and (max-width:375px) {
+
+@media screen and (max-width: 426px) {
+    .social-footer {
+      flex-direction: column;
+      margin-top: 0;
+    }
+  
+    .ig-footer,
+    .fb-footer,
+    .gmail-footer {
+      width: 20px;
+      height: 20px;
+      font-size: 15px;
+      margin: 5px 0;
+      padding: 15px;
+    }
+  
+    .gmail-img {
+      width: 20px;
+    }
+  
+    .footer-head p {
+      font-size: 1.7rem;
+    }
+  
+    .footer-nav h3,
+    .footer-events h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+@media screen and (max-width:376px) {
 
     .carousel {
         height: 60vh;
@@ -616,27 +723,32 @@ nav {
         font-size: 0.8rem;
     }
 
-    .footer {
-        padding: 30px;
-    }
+    
+  .footer-nav a,
+  .footer-events a {
+    font-size: 13px;
+  }
 
-    .footer-nav h3, .footer-events h3 {
-        font-size: 1.8rem;
-    }
+  header {
+    height: 70vh;
+  }
 
-    .footer-head img {
-        width: 20px;
-    }
+  .header-img {
+    height: 70vh;
+  }
 
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-    }
+    
+  .nav-items-b .cta-btn {
+    width: 120px;
+    font-size: 0.9rem;
+    padding: 5px;
+  }
 
-    .copyright {
-        font-size: 14px;
-    }
+  .nav-items ul li {
+    font-size: 0.9rem;
+  }
+
+  .nav-items-b {
+    height: 37vh;
+  }
 }
-
-
- 

@@ -622,14 +622,7 @@ nav {
 }
 
 @media screen and (max-width: 376px) {
-  .header-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .header-content p {
-    font-size: 1rem;
-  }
-
+    
   .footer-nav a,
   .footer-events a {
     font-size: 13px;
@@ -668,4 +661,5 @@ nav {
   .nav-items-b {
     height: 37vh;
   }
+
 }

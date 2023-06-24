@@ -31,6 +31,7 @@ header {
     z-index: 1;
 }
 
+
 .header-img {
     position: absolute;
     top: 0;
@@ -40,6 +41,7 @@ header {
     filter: brightness(70%);
     height: 100vh;
     z-index: -1;
+    
 }
 
 nav {
@@ -427,7 +429,7 @@ nav {
 .ig-footer,
 .fb-footer,
 .gmail-footer {
-    background-color: #000;
+    background-color: rgb(26, 26, 26);
     color: white;
     width: 30px;
     height: 30px;

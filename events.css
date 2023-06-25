@@ -436,9 +436,6 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .nav-items-b {
-    display: none;
-  }
 
   .nav-items-b {
     flex-direction: column;
@@ -446,7 +443,8 @@ nav {
     top: 12vh;
     left: 100%;
     text-align: center;
-    height: 40vh;
+    height: fit-content;
+    padding-bottom: 10px;
     display: block;
     width: 100%;
     background-color: #865dff;
@@ -659,7 +657,8 @@ nav {
   }
 
   .nav-items-b {
-    height: 37vh;
+    height: fit-content;
+    padding-bottom: 10px;
   }
 
 }

@@ -22,7 +22,7 @@ header {
     width: 100%;
     height: 100vh;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .header-img {
@@ -232,22 +232,49 @@ nav {
     position: relative;
 }
 
-.question-box .form-floating{
-    display: inline-block;
-    width: 100%;
+.answer-b {
+  width: 100%;
 }
 
-.question-box textarea {
-    resize: none;
+.question-box .answer{
     height: 50px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-.question-box label {
-    font-size: 1rem;
+.answer input {
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  border: none;
+  border-bottom: 2px solid #000;
+  padding-left: 10px;
+  outline: none;
+  background-color: transparent;
+}
+
+.answer input:focus ~ label,
+.answer input:valid ~ label {
+  transform: translateY(-30px);
+  font-size: 10px;
+  color: #000;
+}
+
+.answer label {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: grey;
+  pointer-events: none;
+  font-size: 17px;
+  transition: all .3s ease;
+  padding-left: 10px;
 }
 
 .answer-p {
-    transform: translateY(30%);
+   transform: translateY(30%);
 }
 
 .main-box {
@@ -694,31 +721,84 @@ nav {
       font-size: 1.5rem;
     }
 
+    nav {
+      height: 12vh;
+    }
+
+    .nav-items-b {
+      top: 10vh;
+      font-size: 0.8rem;
+    }
+    
+    .nav-items-b .cta-btn {
+      width: 100px;
+      font-size: 0.75rem;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     header {
-      height: 70vh;
+      height: 50vh;
+    }
+      
+    .header-img {
+      height: 50vh;
     }
 
     .header-container {
       width: 100%;
-      top: 60%;
+      height: 100%;
+      position: relative;
+      transform: translate(-55%,-50%);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      z-index: 1;
     }
 
     .header-content {
       width: 60%;
+      height: 100%;
+      top: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .navbar-logo h1 {
+      font-size: 1.2rem;
+    }
+
+    .logo-img {
+      width: 20px;
+    }
+
+    nav {
+      align-items: flex-start !important;
+    }
+
+    .navbar-logo a {
+      display: flex;
+      align-items: center;
     }
 
     .header-content h2 {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
 
     .header-content p {
-      font-size: 0.75rem;
+      font-size: 0.6rem;
+      opacity: .7;
+      width: 80%;
+      margin: 0 auto;
     }
     
     .cta-btn2 {
       margin: 15px auto;
-      width: 120px;
-      height: 50px;
+      width: 100px;
+      height: 30px;
       font-size: 0.7rem;
       padding: 5px;
     }
@@ -742,11 +822,11 @@ nav {
     }
   
     header {
-      height: 70vh;
+      height: 50vh;
     }
   
     .header-img {
-      height: 70vh;
+      height: 50vh;
     }
   
     .header-content h2 {
@@ -780,25 +860,28 @@ nav {
       width: 100%;
       transform: translate(-50%, -50%);
       left: 50%;
-      top: 55%;
+      top: 50%;
     }
 
     .header-content {
       width: 55%;
     }
 
-    .header-content h2 {
-      font-size: 1.4rem;
-    }
-
     .header-content p {
       font-size: 0.6rem;
+      width: 90%;
+      text-align: left;
     }
 
     .cta-btn2 {
-      width: 120px;
-      font-size: 0.8rem;
-      margin: 25px auto;
+      width: 105px;
+      font-size: 0.6rem;
+      margin: 15px auto;
+    }
+
+    .cta-btn2 a {
+      display: flex;
+      align-items: center;
     }
 
     .down-arrow {
@@ -848,3 +931,9 @@ nav {
       font-size: 0.7rem;
     }
   }
+
+@media screen and (max-width: 321px) {
+  .header-content {
+    padding: 5px;
+  }
+}

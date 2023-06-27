@@ -1,5 +1,3 @@
-console.log("dhan guru nanak")
-
 const express = require('express')
 const app = express();
 let port = process.env.PORT || 3000;
